@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+VAULT="${PERSONAL_DEV_OS_VAULT:-$HOME/Agent Engineering OS}"
+SYNC="$VAULT/90-Agent-Adapters/sync-personal-dev-os.sh"
+
+if [[ ! -x "$SYNC" ]]; then
+  echo "Missing sync helper: $SYNC" >&2
+  exit 1
+fi
+
+if [[ "${1:-}" == "personal-dev-os" ]]; then
+  shift
+fi
+
+case "${1:-}" in
+  sync|check)
+    exec "$SYNC" "$1"
+    ;;
+  -h|--help|help|"")
+    cat <<'USAGE'
+Usage:
+  skills personal-dev-os sync   Sync Obsidian checklists into the Personal Dev OS skill.
+  skills personal-dev-os check  Check whether the generated skill mirror is current.
+USAGE
+    ;;
+  *)
+    echo "Unknown command. Use: skills personal-dev-os sync|check" >&2
+    exit 2
+    ;;
+esac

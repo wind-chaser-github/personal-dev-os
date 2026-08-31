@@ -1,0 +1,4 @@
+interface:
+  display_name: "Personal Dev OS"
+  short_description: "Your default software workflow, quality standards, review, testing, and capture rules."
+  default_prompt: "Use Personal Dev OS for this software task: frame, inspect, decide, plan, execute, verify, review, capture, and report workflow delta."

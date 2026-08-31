@@ -1,0 +1,11 @@
+.DS_Store
+tmp/
+
+# Obsidian local UI/session state.
+vault/.obsidian/workspace.json
+vault/.obsidian/workspace-mobile.json
+
+# Local editor and runtime noise.
+.idea/
+.vscode/
+*.log
