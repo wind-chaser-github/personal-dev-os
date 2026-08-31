@@ -1,0 +1,11 @@
+---
+alwaysApply: true
+---
+
+# Personal Dev OS
+
+For non-trivial software work in this repository, read and follow `skills/personal-dev-os/SKILL.md`.
+
+Load relevant references from `skills/personal-dev-os/references/` before planning or editing. The Obsidian source of truth is `vault/`; IDE adapter wiring lives in `vault/90-Agent-Adapters/`.
+
+This file is a project-level bridge only. Keep detailed workflow rules in the skill and vault.

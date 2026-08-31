@@ -25,6 +25,17 @@ personal-dev-os.always-on.md
 
 Codex / opencode also get a short pointer block in `AGENTS.md`.
 
+For a repository that should always load Personal Dev OS, add project-level bridge files too:
+
+```text
+AGENTS.md                          # Codex / opencode
+CLAUDE.md                          # Claude Code
+GEMINI.md                          # Gemini / Antigravity
+.cursor/rules/personal-dev-os.mdc  # Cursor
+```
+
+These files should stay short and point to the skill. Do not copy the full workflow into each IDE file.
+
 Repair all links:
 
 ```bash
@@ -59,6 +70,8 @@ Obsidian remains the source of truth for human checklists. The sync command only
 | Antigravity / Gemini | [[antigravity]] |
 | Open Code Review | [[open-code-review]] |
 | opencode | skills + `AGENTS.md` pointer |
+
+Full wiring notes: `docs/ide-auto-load.md` in the repository checkout.
 
 ## Edit Where
 

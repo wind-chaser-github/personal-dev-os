@@ -5,6 +5,7 @@ Personal Dev OS is a portable personal engineering operating system for AI-assis
 - `vault/`: the Obsidian knowledge base, including principles, workflows, checklists, templates, adapter notes, and the new-computer setup guide.
 - `skills/personal-dev-os/`: the Codex skill package that agents execute from.
 - `vault/90-Agent-Adapters/`: adapter prompts and scripts for Codex, Cursor, Claude Code, Gemini/Antigravity, opencode, Open Code Review, and optional OMX usage.
+- `AGENTS.md`, `CLAUDE.md`, `GEMINI.md`, `.cursor/rules/personal-dev-os.mdc`: project-level bridge files that make IDEs load the workflow automatically inside this repository.
 
 The Obsidian vault is the human source of truth. The skill is the executable agent surface. When a workflow rule should become automatic agent behavior, update both the vault checklist/principle and the matching skill reference.
 
@@ -30,6 +31,8 @@ omx doctor  # optional, only when omx is installed
 
 The detailed setup guide lives at [vault/90-Agent-Adapters/setup-new-computer.md](vault/90-Agent-Adapters/setup-new-computer.md).
 
+IDE auto-load details live at [docs/ide-auto-load.md](docs/ide-auto-load.md). The short version: run the installer once for global rules, and add project-level bridge files (`AGENTS.md`, `CLAUDE.md`, `GEMINI.md`, Cursor rule) to repos that should always use Personal Dev OS.
+
 ## Daily Use
 
 Start from [vault/Home.md](vault/Home.md) or [vault/Daily-Use-Manual.md](vault/Daily-Use-Manual.md).
@@ -52,6 +55,7 @@ skills personal-dev-os sync
 - [vault/40-Decision-Records](vault/40-Decision-Records): templates for ADRs, intent cards, incidents, specs, and personal rules.
 - [vault/90-Agent-Adapters](vault/90-Agent-Adapters): adapter prompts, always-on baseline, installation, link repair, and sync scripts.
 - [skills/personal-dev-os](skills/personal-dev-os): Codex skill package and operational references.
+- [docs/ide-auto-load.md](docs/ide-auto-load.md): exact auto-load wiring for Codex, Cursor, Claude Code, Gemini/Antigravity, and opencode.
 
 ## Maintenance Rule
 

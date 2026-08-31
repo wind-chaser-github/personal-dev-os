@@ -40,6 +40,29 @@ Personal Dev OS has three independent pieces:
    skills personal-dev-os check
    ```
 
+## Auto-Load Wiring
+
+The installer writes or repairs global always-on entries so IDEs load Personal Dev OS without the user naming the skill:
+
+| Tool | Global entry |
+| --- | --- |
+| Codex | `~/.codex/AGENTS.md` marked pointer block |
+| Cursor | `~/.cursor/rules/personal-dev-os.mdc` symlink |
+| Claude Code | `~/.claude/rules/personal-dev-os.md` symlink |
+| Gemini / Antigravity | `~/.gemini/AGENTS.md` symlink |
+| opencode | `~/.config/opencode/AGENTS.md` marked pointer block |
+
+Repos that should force this workflow should also include project-level bridge files:
+
+| Tool | Project file |
+| --- | --- |
+| Codex / opencode | `AGENTS.md` |
+| Claude Code | `CLAUDE.md` |
+| Gemini / Antigravity | `GEMINI.md` |
+| Cursor | `.cursor/rules/personal-dev-os.mdc` |
+
+This repository includes those project bridge files. For other projects, copy their short shape and point them at the installed skill or a repo-local skill checkout.
+
 ## Update
 
 Edit shared personal norms in Obsidian, then run:
